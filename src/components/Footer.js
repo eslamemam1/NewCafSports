@@ -152,7 +152,7 @@ const Footer = (props) => {
           </ul>
         </div>
         {/**-------------------- */}
-        <div className=" flex items-center flex-col w-full sm:w-[40%] gap-2 mt-2">
+        <div className=" flex items-center flex-col w-full sm:w-[40%] mt-2">
           <p className="text-green-700 font-medium md:pr-[115px] gap-2 mt-2 text-lg">
             {t("Reach Us")}
           </p>
