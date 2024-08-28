@@ -22,7 +22,7 @@ import { useTranslation } from "react-i18next";
 import SmallContact from "../SmallContact";
 
 function Services(props) {
-  const phoneNumber = "+971543575745000";
+  const phoneNumber = "+971543575745";
   const { t, i18n } = useTranslation();
   const [width, setWidth] = useState(0);
   useEffect(() => {
