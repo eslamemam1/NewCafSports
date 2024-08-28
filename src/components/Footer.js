@@ -17,7 +17,12 @@ const Footer = (props) => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
-  const phoneNumber = "+971543575745";
+  const uaeGoogleMapsUrl =
+    "https://www.google.com/maps/place/United+Arab+Emirates/@24.3361314,51.3062024,7z/data=!3m1!4b1!4m6!3m5!1s0x3e5e48dfb1ab12bd:0x33d32f56c0080aa7!8m2!3d23.424076!4d53.847818!16zL20vMGoxejg?entry=ttu";
+  const egyptOffice =
+    "https://www.google.com/maps/place/Medical+Center+3/@30.0591659,31.3684443,17z/data=!3m1!4b1!4m6!3m5!1s0x14583dc25f5e8555:0xbd4eaa7f7e796599!8m2!3d30.0591659!4d31.3684443!16s%2Fg%2F11clvy809z?entry=ttu&g_ep=EgoyMDI0MDgyNi4wIKXMDSoASAFQAw%3D%3D";
+  const EslamPortfolioLink = "https://eslamsportfolio.netlify.app/";
+  const phoneNumber = "+201126484032";
   return (
     <div className=" min-h-[40vh] bg-black relative">
       <img
@@ -75,7 +80,7 @@ const Footer = (props) => {
               <FaWhatsapp className="w-[30px] h-[50px] text-white" />
             </a>
             <a
-              href="tel:+971543575745"
+              href="tel:(+20) 1032906015"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -88,18 +93,19 @@ const Footer = (props) => {
           <p className=" text-green-700 font-medium mt-4 text-lg">
             {t("Quick Links")}
           </p>
-          <ul
-          >
-            <div className={
-                  i18n.language === "en"
-                    ? " flex flex-row sm:flex-col flex-wrap gap-3 justify-center"
-                    : " flex flex-row-reverse sm:flex-col flex-wrap gap-3 justify-center "
-                }>
+          <ul>
+            <div
+              className={
+                i18n.language === "en"
+                  ? " flex flex-row sm:flex-col flex-wrap gap-2 mt-2"
+                  : " flex flex-row-reverse sm:flex-col flex-wrap gap-2 mt-2 "
+              }
+            >
               <div
                 className={
                   i18n.language === "en"
-                    ? " flex flex-row sm:flex-col gap-3 "
-                    : " flex flex-row-reverse sm:flex-col gap-3  "
+                    ? " flex flex-row sm:flex-col gap-3 text-left "
+                    : " flex flex-row-reverse sm:flex-col gap-3  text-right"
                 }
               >
                 <li className=" font-normal text-xs sm:text-sm text-[#ffffff]">
@@ -124,11 +130,13 @@ const Footer = (props) => {
                   </NavLink>
                 </li>
               </div>
-              <div className={
+              <div
+                className={
                   i18n.language === "en"
-                    ? " flex flex-row sm:flex-col gap-3"
-                    : " flex flex-row-reverse sm:flex-col gap-3 "
-                }>
+                    ? " flex flex-row sm:flex-col gap-3 text-left"
+                    : " flex flex-row-reverse sm:flex-col gap-3 text-right"
+                }
+              >
                 <li className="font-normal text-xs sm:text-sm text-[#fff]">
                   <NavLink onClick={topFunction} className="" to={"/Services"}>
                     {t("Services")}
@@ -144,25 +152,54 @@ const Footer = (props) => {
           </ul>
         </div>
         {/**-------------------- */}
-        <div className=" flex items-center flex-col w-full sm:w-[40%]">
-          <p className="text-green-700 font-medium md:pr-[115px] mt-4 text-lg">
+        <div className=" flex items-center flex-col w-full sm:w-[40%] gap-2 mt-2">
+          <p className="text-green-700 font-medium md:pr-[115px] gap-2 mt-2 text-lg">
             {t("Reach Us")}
           </p>
           <ul
             className={
               i18n.language === "en"
-                ? " flex flex-row flex-wrap mt-2 justify-center items-start sm:flex-col gap-2 sm:gap-5"
-                : " flex flex-row flex-wrap mt-2 justify-center items-start sm:flex-col gap-2 sm:gap-5:"
+                ? " flex flex-row flex-wrap mt-2 justify-center items-start sm:flex-col gap-2 sm:gap-2"
+                : " flex flex-row flex-wrap mt-2 justify-center items-start sm:flex-col gap-2 sm:gap-2:"
             }
           >
+            {/* mail 1 */}
             <div className="sm:ml-2 w-[100%] flex gap-2 justify-center">
               <img src={mail} alt="mail" className=" w-[20px] sm:w-[25px]" />
               <li className="font-normal text-xs text-start sm:w-[170px] text-[#fff]">
-              <a href="mailto:sales_uae@caf-sports.com"
+                <a
+                  href="mailto:info@caf-sports.com"
                   target="_blank"
-                  rel="noopener noreferrer" >
-              sales_uae@caf-sports.com
-              </a>
+                  rel="noopener noreferrer"
+                >
+                  info@caf-sports.com
+                </a>
+              </li>
+            </div>
+            {/* mail 2 */}
+            <div className="sm:ml-2 w-[100%] flex gap-2 justify-center">
+              <img src={mail} alt="mail" className=" w-[20px] sm:w-[25px]" />
+              <li className="font-normal text-xs text-start sm:w-[170px] text-[#fff]">
+                <a
+                  href="mailto:sales_uae@caf-sports.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  sales_uae@caf-sports.com
+                </a>
+              </li>
+            </div>
+            {/* mail 3 */}
+            <div className="sm:ml-2 w-[100%] flex gap-2 justify-center">
+              <img src={mail} alt="mail" className=" w-[20px] sm:w-[25px]" />
+              <li className="font-normal text-xs text-start sm:w-[170px] text-[#fff]">
+                <a
+                  href="mailto:sales_egy@caf-sports.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  sales_egy@caf-sports.com
+                </a>
               </li>
             </div>
             <div className="sm:ml-2 flex sm:gap-2 items-start">
@@ -172,7 +209,13 @@ const Footer = (props) => {
                 alt="mail"
               />
               <li className="font-normal text-xs sm:text-sm text-start sm:w-[170px] text-[#fff]">
-                United Arab Emirates
+                <a
+                  href={uaeGoogleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  United Arab Emirates
+                </a>
               </li>
             </div>
             <div className="sm:ml-2 flex gap-2 items-start text-start">
@@ -195,26 +238,32 @@ const Footer = (props) => {
                   alt="mail"
                 />
                 <li className="font-normal text-xs sm:text-sm text-start sm:w-[170px] text-[#fff]">
-                  Egypt
+                  <a
+                    href={egyptOffice}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Medical Center 3,Nasr City,Egypt
+                  </a>
                 </li>
               </div>
               <div className="sm:ml-2 flex gap-1 items-start text-start">
                 <img src={phone} alt="mail" className=" w-[20px] sm:w-[25px]" />
                 <li className="font-normal flex gap-1 flex-wrap text-xs sm:text-sm sm:w-[170px] text-[#fff]">
                   <a
-                    href="tel:01141227755"
+                    href="tel:(+20) 1141227755"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    (+20) 01141227755
+                    (+20) 1141227755
                   </a>
                   <br />
                   <a
-                    href="tel:01126484032"
+                    href="tel:(+20) 1032906015"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    (+20) 01126484032
+                    (+20) 1032906015
                   </a>
                 </li>
               </div>
@@ -230,11 +279,13 @@ const Footer = (props) => {
             : "w-[80%] sm:w-[85%] m-auto h-[120px] sm:h-[100px] flex items-center justify-end"
         }
       >
-        <p className=" text-sm sm:text-lg font-light text-white">
-          {t(
-            "Copyright © 2024 All rights reserved | This Website is made by Eslam Emam"
-          )}
-        </p>
+        <a href={EslamPortfolioLink} target="_blank" rel="noopener noreferrer">
+          <p className=" text-sm sm:text-lg font-light text-white">
+            {t(
+              "Copyright © 2024 All rights reserved | This Website is made by Eslam Emam"
+            )}
+          </p>
+        </a>
       </div>
       <img
         src={Vector2}
