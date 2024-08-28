@@ -184,6 +184,11 @@
   font-size: 40px;
 }
 
+.slick-dots {
+  bottom: 70px;
+  margin-bottom: 35px;
+}
+
 .scallSportFlooring {
   transition: 0.5s;
   background-color: rgba(9, 95, 255, 0.3);
