@@ -13,7 +13,7 @@ import ButtonGroup from "../categories/ButtonGroup";
 
 function Projects() {
   const { t } = useTranslation();
-  const phoneNumber = "+971543575745";
+  const phoneNumber = "+201126484032";
   const [width, setWidth] = useState(0);
   useEffect(() => {
     const handleResize = () => {
@@ -79,7 +79,7 @@ function Projects() {
           >
             <FaWhatsapp className="w-[30px] absolute bottom-5 right-11 text-white" />
           </a>
-          <a href="tel:+971543575745" target="_blank" rel="noopener noreferrer">
+          <a href="tel:(+20) 1032906015" target="_blank" rel="noopener noreferrer">
             <FaPhone className="w-[30px] absolute bottom-5 right-[90px] text-white" />
           </a>
         </div>
