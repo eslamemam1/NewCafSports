@@ -1,8 +1,17 @@
 import React from 'react';
-import { QRCodeCanvas } from 'qrcode.react'; // Adjusted import statement
+import { QRCodeCanvas } from 'qrcode.react';
 import url from "./Acrylic Data Sheet.pdf"
 
-const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
+const QRCodeComponent = ({ fileUrl }) => {
+  return (
+    <div className='w-full flex flex-col items-center justify-center text-center'>
+      <h2 className='mt-4 font-normal text-xl'>Acrylic</h2>
+      <QRCodeCanvas value={fileUrl} className="w-28 my-2" /> {/* QR Code */}
+    </div>
+  );
+};
+
+const DownloadButton = ({ fileUrl, fileName }) => {
   const handleDownload = () => {
     fetch(fileUrl)
       .then(response => response.blob())
@@ -20,10 +29,10 @@ const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
   };
 
   return (
-    <div className=' w-full flex flex-col items-center justify-center text-center'>
-      <h2 className=' mt-4 font-normal text-xl'>Acrylic</h2>
-      <QRCodeCanvas value={fileUrl} className=" w-28 my-2" /> {/* Using QRCodeCanvas */}
-      <button className='b font-normal text-xs sm:text-xl rounded-border p-2 mt-2'  onClick={handleDownload}>Download</button>
+    <div className='w-full flex flex-col items-center justify-center text-center'>
+      <button className='b font-normal text-xs sm:text-xl rounded-border p-2 mt-2' onClick={handleDownload}>
+        Download
+      </button>
     </div>
   );
 };
@@ -34,7 +43,8 @@ const App = () => {
 
   return (
     <div>
-      <DownloadButtonWithQR fileUrl={url} fileName={fileName} />
+      <QRCodeComponent fileUrl={fileUrl} />
+      <DownloadButton fileUrl={url} fileName={fileName} />
     </div>
   );
 };

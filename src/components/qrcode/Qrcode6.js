@@ -1,8 +1,17 @@
 import React from 'react';
-import { QRCodeCanvas } from 'qrcode.react'; // Adjusted import statement
+import { QRCodeCanvas } from 'qrcode.react';
 import url from "./Grass.pdf"
 
-const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
+const QRCodeComponent = ({ fileUrl }) => {
+  return (
+    <div className='w-full flex flex-col items-center justify-center text-center'>
+      <h2 className='mt-4 font-normal text-xl'>Grass Adhesive</h2>
+      <QRCodeCanvas value={fileUrl} className="w-28 my-2" /> {/* QR Code */}
+    </div>
+  );
+};
+
+const DownloadButton = ({ fileUrl, fileName }) => {
   const handleDownload = () => {
     fetch(fileUrl)
       .then(response => response.blob())
@@ -21,20 +30,20 @@ const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
 
   return (
     <div className='w-full flex flex-col items-center justify-center text-center'>
-      <h2 className=' mt-4 font-normal text-xl'>Grass</h2>
-      <QRCodeCanvas value={fileUrl} className=" w-28 my-2" /> {/* Using QRCodeCanvas */}
-      <button className='b font-normal text-xs sm:text-xl rounded-border p-2 mt-2'  onClick={handleDownload}>Download</button>
+      <button className='b font-normal text-xs sm:text-xl rounded-border p-2 mt-2' onClick={handleDownload}>
+        Download
+      </button>
     </div>
   );
 };
 
 const App = () => {
   const fileUrl = 'https://caf-sports.com/static/media/Grass.pdf';
-  const fileName = 'Grass.pdf';
-
+  const fileName = 'Grass Adhesive.pdf';
   return (
     <div>
-      <DownloadButtonWithQR fileUrl={url} fileName={fileName} />
+      <QRCodeComponent fileUrl={fileUrl} />
+      <DownloadButton fileUrl={url} fileName={fileName} />
     </div>
   );
 };
