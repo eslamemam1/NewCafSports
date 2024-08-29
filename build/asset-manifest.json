@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NewCafSports/static/css/main.413eb6fd.css",
-    "main.js": "/NewCafSports/static/js/main.ec190708.js",
+    "main.js": "/NewCafSports/static/js/main.44536b27.js",
     "static/js/453.874d65d5.chunk.js": "/NewCafSports/static/js/453.874d65d5.chunk.js",
     "static/media/Services.jpg": "/NewCafSports/static/media/Services.796bac806eb0cce6fc43.jpg",
     "static/media/4.jpg": "/NewCafSports/static/media/4.d8151c1301c8616e7703.jpg",
@@ -51,11 +51,11 @@
     "static/media/Vector2.svg": "/NewCafSports/static/media/Vector2.e42f9cbf392e799a7d8d5e661e2bb8c9.svg",
     "static/media/Vector.svg": "/NewCafSports/static/media/Vector.e32fe0f4044cbff4586dcc55cb32a2a7.svg",
     "main.413eb6fd.css.map": "/NewCafSports/static/css/main.413eb6fd.css.map",
-    "main.ec190708.js.map": "/NewCafSports/static/js/main.ec190708.js.map",
+    "main.44536b27.js.map": "/NewCafSports/static/js/main.44536b27.js.map",
     "453.874d65d5.chunk.js.map": "/NewCafSports/static/js/453.874d65d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.413eb6fd.css",
-    "static/js/main.ec190708.js"
+    "static/js/main.44536b27.js"
   ]
 }

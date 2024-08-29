@@ -101,7 +101,7 @@ function NavBar(props) {
                   element={props.togol2}
                   onClick={topFunction}
                   className="navlink0"
-                  to={"/CAF-SPORTS"}
+                  to={"/NewCafSports"}
                 >
                   {t("Home")}
                 </NavLink>
@@ -167,7 +167,7 @@ function NavBar(props) {
       </nav>
 
       <Routes>
-        <Route path="/CAF-SPORTS" element={<HomePage home={t("Home")} />} />
+        <Route path="/NewCafSports" element={<HomePage home={t("Home")} />} />
         <Route path="/About" element={<About about={t("About Us")} />} />
         <Route
           path="/Projects"
