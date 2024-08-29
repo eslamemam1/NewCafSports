@@ -12,14 +12,17 @@ import Vector from "../../imges/Vector.svg";
 import Vector2 from "../../imges/Vector2.svg";
 import LogoSectionTwo from "../../imges/LogoSectionTwo.svg";
 import Maintenance from "../../imges/Maintenance.jpg";
-import Support from "../../imges/Support.png";
-import HighQualityWork from "../../imges/HighQualityWork.png";
-import Expert from "../../imges/Expert.png";
 import OurPartener from "../new/OurPartener";
 import Footer from "../Footer";
 import SectionThreeHomPage from "../SectionThreeHomPage";
 import { useTranslation } from "react-i18next";
 import SmallContact from "../SmallContact";
+import Qrcode1 from "../qrcode/Qrcode1.js"
+import Qrcode2 from "../qrcode/Qrcode2.js"
+import Qrcode3 from "../qrcode/Qrcode3.js"
+import Qrcode4 from "../qrcode/Qrcode4.js"
+import Qrcode5 from "../qrcode/Qrcode5.js"
+import Qrcode6 from "../qrcode/Qrcode6.js"
 
 function Services(props) {
   const phoneNumber = "+201126484032";
@@ -241,8 +244,19 @@ function Services(props) {
             )}
           </p>
         </div>
-        
       </div>
+      <div>
+        <div className=" w-full text-xs flex flex-col sm:flex-row justify-evenly items-center">
+        <Qrcode1/>
+        <Qrcode2/>
+        <Qrcode3/>
+        </div>
+        <div className=" w-full text-xs flex flex-col sm:flex-row justify-evenly items-center">
+        <Qrcode4/>
+        <Qrcode5/>
+        <Qrcode6/>
+        </div>
+        </div>
         {/**---------------------- */}
         <div className=" h-24"></div>
       </div>

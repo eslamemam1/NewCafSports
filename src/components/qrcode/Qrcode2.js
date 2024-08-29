@@ -1,6 +1,6 @@
 import React from 'react';
 import { QRCodeCanvas } from 'qrcode.react'; // Adjusted import statement
-import url from "./Primer Data Sheet.pdf"
+import url from "./Acrylic Data Sheet.pdf"
 
 const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
   const handleDownload = () => {
@@ -20,8 +20,8 @@ const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
   };
 
   return (
-    <div className='w-full flex flex-col items-center justify-center text-center'>
-      <h2 className=' mt-4 font-normal text-xl'>Primer</h2>
+    <div className=' w-full flex flex-col items-center justify-center text-center'>
+      <h2 className=' mt-4 font-normal text-xl'>Acrylic</h2>
       <QRCodeCanvas value={fileUrl} className=" w-28 my-2" /> {/* Using QRCodeCanvas */}
       <button className='b font-normal text-xs sm:text-xl rounded-border p-2 mt-2'  onClick={handleDownload}>Download</button>
     </div>
@@ -29,8 +29,8 @@ const DownloadButtonWithQR = ({ fileUrl, fileName }) => {
 };
 
 const App = () => {
-  const fileUrl = 'https://caf-sports.com/static/media/Primer.73cccf8dd7bb401754ca.pdf';
-  const fileName = 'Primer.pdf';
+  const fileUrl = 'https://caf-sports.com/static/media/Acrylic.0f6a3899a3b8254875c1.pdf';
+  const fileName = 'Acrylic.pdf';
 
   return (
     <div>
