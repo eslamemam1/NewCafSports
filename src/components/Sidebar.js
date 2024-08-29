@@ -41,7 +41,7 @@ function Sidebar(props) {
               topFunction();
             }}
             className="navlinkEn"
-            to={"/CAF-SPORTS"}
+            to={"/NewCafSports"}
           >
             <p>{t("Home")}</p>
           </NavLink>
